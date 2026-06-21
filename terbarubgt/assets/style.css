@@ -1,0 +1,212 @@
+/* Custom CSS Components for Portal Desa Digital */
+
+/* Style untuk Item Sidebar Navigasi */
+.sb-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+  /* Warna text-t2 default */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sb-item:hover {
+  background-color: #f3f4f6;
+  /* Hover bg */
+  color: #111827;
+  /* Hover text-t1 */
+}
+
+.sb-item.active {
+  background-color: #e6f6f0;
+  /* bg-brand-light kustom */
+  color: #1d9e75;
+  /* text-brand kustom */
+  font-weight: 600;
+}
+
+/* Style untuk Tombol Akses Cepat */
+.quick-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.quick-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Badges Status */
+.bdg {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.bdg-green {
+  background-color: #e6f6f0;
+  color: #1d9e75;
+}
+
+.bdg-amber {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.bdg-red {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+/* Tambahan untuk Konsistensi Form Input di halaman Login */
+input[type="text"],
+input[type="password"] {
+  color: #111827;
+  /* Menggunakan text-t1 */
+  transition: border-color 0.15s ease, ring 0.15s ease;
+}
+
+/* Kustomisasi warna ring fokus Tailwind khusus untuk warna brand */
+input:focus {
+  --tw-ring-color: #1d9e75 !important;
+  border-color: #1d9e75 !important;
+}
+
+/* Kustomisasi Checkbox agar senada dengan warna Brand */
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #1d9e75;
+  border-color: #1d9e75;
+}
+
+/* Custom CSS: Komponen Kartu Pilihan Jenis Surat (type-card) */
+.type-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  /* border-border */
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.type-card:hover {
+  border-color: #1d9e75;
+  /* border-brand */
+  background-color: #f9fafb;
+  /* bg-base */
+}
+
+/* Status Saat Kartu Dipilih */
+.type-card.selected {
+  border-color: #1d9e75;
+  /* border-brand */
+  background-color: #e6f6f0;
+  /* bg-brand-light */
+  box-shadow: 0 0 0 1px #1d9e75;
+  /* efek cincin tipis */
+}
+
+/* Custom CSS: Komponen Kartu Kategori (cat-card) pada Laporan Lingkungan */
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  /* border-border */
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cat-card:hover {
+  border-color: #1d9e75;
+  /* Hover akan menggunakan warna brand hijau */
+  background-color: #f9fafb;
+}
+
+/* Status Saat Kategori Dipilih (Warna menggunakan brand utama, bukan merah, agar konsisten) */
+.cat-card.selected {
+  border-color: #1d9e75;
+  background-color: #e6f6f0;
+  box-shadow: 0 0 0 1px #1d9e75;
+}
+
+/* Custom CSS: Kotak Unggah File / Area Drag & Drop */
+.upload-box {
+  transition: all 0.2s ease;
+}
+
+.upload-box:hover {
+  background-color: #f9fafb;
+  /* bg-base */
+  border-color: #1d9e75 !important;
+  /* Berubah hijau saat dihover */
+}
+
+/* Custom CSS: Komponen Kartu Pengumuman (ann-card) */
+.ann-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  /* bg-surface */
+  border: 1px solid #e5e7eb;
+  /* border-border */
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ann-card:hover {
+  background-color: #f9fafb;
+  /* bg-base */
+  border-color: #d1d5db;
+}
+
+/* Modifikasi untuk Pengumuman yang Belum Dibaca (unread) */
+.ann-card.unread {
+  background-color: #ffffff;
+  border-color: #1d9e75;
+  /* border-brand untuk highlight */
+  box-shadow: 0 4px 6px -1px rgba(29, 158, 117, 0.05);
+}
+
+/* Efek pita/indikator hijau di sisi kiri untuk kartu unread */
+.ann-card.unread::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #1d9e75;
+  /* warna brand */
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
